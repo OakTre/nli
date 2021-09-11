@@ -1,12 +1,12 @@
-function documentReady(fn) {
-	if (document.readyState === "loading") {
-		document.addEventListener("DOMContentLoaded", fn)
-	} else {
-		fn();
-	}
-}
+// function documentReady(fn) {
+// 	if (document.readyState === "loading") {
+// 		document.addEventListener("DOMContentLoaded", fn)
+// 	} else {
+// 		fn();
+// 	}
+// }
 
-documentReady(() => {
+document.addEventListener("DOMContentLoaded", function(event) {
 	const options = BodyScrollOptions = {
 		reserveScrollBarGap: true,
 	};
@@ -40,5 +40,4 @@ documentReady(() => {
 			bodyScrollLock.enableBodyScroll(menu, options);
 		}, 200);
 	});
-
 });
